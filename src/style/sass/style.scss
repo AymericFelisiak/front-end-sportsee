@@ -1,0 +1,28 @@
+@use "pages/user";
+@use "components/navbar";
+@use "components/sidebar";
+@use "abstract/variables";
+
+html, body, #root, .App {
+    height: 100%;
+}
+
+html {
+	font-family: variables.$font;
+	scroll-behavior: smooth;
+}
+
+body {
+	margin: 0;
+}
+
+.App {
+	display: grid;
+    height: 100%;
+    grid-template-columns: auto 1fr 1fr;
+    grid-template-rows: auto 1fr 1fr;
+	grid-template-areas:
+		"navbar navbar navbar"
+		"sidebar main main"
+		"sidebar main main";
+}

@@ -1,0 +1,43 @@
+.sidebar {
+    grid-area: sidebar;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    width: 120px;
+
+    .icon-container {
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+
+        .icon-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            background-color: white;
+            height: 64px;
+            width: 64px;
+            border-radius: 6px;
+            svg {
+                width: 32px;
+                height: 32px;
+                color: red;
+            }
+        }
+    }
+    
+    .copyright {
+        position: absolute;
+        bottom: 30px;
+        h3 {
+            rotate: 180deg;
+            color: white;
+            writing-mode: vertical-lr;
+            font-size: 12px;
+            font-weight: 500;
+        }
+    }
+}
