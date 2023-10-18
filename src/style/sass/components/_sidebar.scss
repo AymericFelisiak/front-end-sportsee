@@ -3,7 +3,7 @@
     display: flex;
     position: relative;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     background-color: black;
     width: 120px;
@@ -11,7 +11,9 @@
     .icon-container {
         display: flex;
         flex-direction: column;
+        justify-content: center;
         row-gap: 20px;
+        height: 100%;
 
         .icon-wrapper {
             display: flex;
@@ -30,8 +32,7 @@
     }
     
     .copyright {
-        position: absolute;
-        bottom: 30px;
+        margin-bottom: 30px;
         h3 {
             rotate: 180deg;
             color: white;
