@@ -1,0 +1,10 @@
+.main-container {
+    display: grid;
+    grid-template-areas: 
+        'username username username username'
+        'bar-chart bar-chart bar-chart info-card'
+        'bar-chart bar-chart bar-chart info-card'
+        'line-chart radar-chart radial-bar-chart info-card'
+        'line-chart radar-chart radial-bar-chart info-card'
+    ;
+}

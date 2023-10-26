@@ -1,6 +1,15 @@
-@use "pages/user";
+// Components
 @use "components/navbar";
 @use "components/sidebar";
+@use "components/username";
+@use "components/dailysessions";
+@use "components/infocards";
+@use "components/averagesessions";
+
+// Pages
+@use "pages/profile";
+
+// Abstract
 @use "abstract/variables";
 
 html, body, #root, .App {
@@ -19,10 +28,9 @@ body {
 .App {
 	display: grid;
     height: 100%;
-    grid-template-columns: auto 1fr 1fr;
-    grid-template-rows: auto 1fr 1fr;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto 1fr;
 	grid-template-areas:
-		"navbar navbar navbar"
-		"sidebar main main"
-		"sidebar main main";
+		"navbar navbar"
+		"sidebar main";
 }
