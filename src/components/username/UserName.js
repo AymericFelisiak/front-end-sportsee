@@ -12,7 +12,10 @@ export default function UserName() {
 
     return (
         <div className="username-container">
-            <h1>Bonjour {userName}</h1>
+            <div className="username-wrapper">
+                <h1>Bonjour&nbsp;</h1>
+                <h1 className='name'>{userName}</h1>
+            </div>
             <h2>Félicitation ! Vous avez explosé vos objectifs hier 👏</h2>
         </div>
     );
