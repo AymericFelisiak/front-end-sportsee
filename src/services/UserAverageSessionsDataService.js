@@ -1,7 +1,7 @@
 import { useMockedData } from '../config';
-import AverageSessionData from '../mock/AverageSessionData.json';
+import AverageSessionData from '../mock/AverageSessionsData.json';
 
-export default async function UserDataService(id) {
+export default async function UserAverageSessionsDataService(id) {
     if (useMockedData) {
         const userData = AverageSessionData.find(
             (data) => data.userId === Number(id)

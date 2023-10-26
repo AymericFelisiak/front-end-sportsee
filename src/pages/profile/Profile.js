@@ -1,6 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import Performance from '../../services/UserPerformanceDataService';
+import FetchUser from '../../services/FetchUser';
+import UserContext from '../../contexts/UserContext';
+import AverageSessions from '../../components/averagesessions/AverageSessions';
+import UserName from '../../components/username/UserName';
+import DailySessions from '../../components/dailysessions/DailySessions';
+import InfoCards from '../../components/infocards/InfoCards';
+import Performance from '../../components/performance/Performance';
 
 export default function Profile() {
     const { id } = useParams();
@@ -9,16 +15,24 @@ export default function Profile() {
     useEffect(() => {
         const data = async() => {
             try {
-                const response = await Performance(id);
+                const response = await FetchUser(id);
                 setUserData(response);
             } catch (error) {
                 console.error('Error user fetch', error);
             }
         };
         data();
-    }, [Performance, id]);
+    }, [FetchUser, id]);
 
-    console.log(userData);
-
-    return <main className="main-container"></main>;
+    return (
+        <UserContext.Provider value={userData}>
+            <main className="main-container">
+                <UserName></UserName>
+                <DailySessions></DailySessions>
+                <InfoCards></InfoCards>
+                <AverageSessions></AverageSessions>
+                <Performance></Performance>
+            </main>
+        </UserContext.Provider>
+    );
 }

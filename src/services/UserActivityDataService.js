@@ -1,7 +1,7 @@
 import { useMockedData } from '../config';
 import ActivityData from '../mock/ActivityData.json';
 
-export default async function UserDataService(id) {
+export default async function UserActivityDataService(id) {
     if (useMockedData) {
         const userData = ActivityData.find(
             (data) => data.userId === Number(id)
