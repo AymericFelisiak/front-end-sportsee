@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { useParams } from 'react-router-dom';
-import FetchUser from '../../services/FetchUser';
-import UserContext from '../../contexts/UserContext';
+import { UserContextProvider } from '../../contexts/UserContext';
 import AverageSessions from '../../components/averagesessions/AverageSessions';
 import UserName from '../../components/username/UserName';
 import DailySessions from '../../components/dailysessions/DailySessions';
@@ -10,22 +9,9 @@ import Performance from '../../components/performance/Performance';
 
 export default function Profile() {
     const { id } = useParams();
-    const [userData, setUserData] = useState([]);
-
-    useEffect(() => {
-        const data = async() => {
-            try {
-                const response = await FetchUser(id);
-                setUserData(response);
-            } catch (error) {
-                console.error('Error user fetch', error);
-            }
-        };
-        data();
-    }, [FetchUser, id]);
 
     return (
-        <UserContext.Provider value={userData}>
+        <UserContextProvider id={id}>
             <main className="main-container">
                 <UserName></UserName>
                 <DailySessions></DailySessions>
@@ -33,6 +19,6 @@ export default function Profile() {
                 <AverageSessions></AverageSessions>
                 <Performance></Performance>
             </main>
-        </UserContext.Provider>
+        </UserContextProvider>
     );
 }

@@ -19,6 +19,7 @@
     "rules": {
         "semi": 0,
         "space-before-function-paren": ["error", "never"],
-        "indent": ["error", 4]
+        "indent": ["error", 4],
+        "react/prop-types": "off"
     }
 }
