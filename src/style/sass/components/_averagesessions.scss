@@ -1,3 +1,9 @@
 .averagesessions-container {
     grid-area: line-chart;
+    position: relative;
+    background-color: #ff0000;
+    padding: 40px 60px;
+    box-shadow: 0px 2px 4px 0px #00000005;
+    color: #ffffff28;
+    border-radius: 10px;
 }

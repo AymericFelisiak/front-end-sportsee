@@ -1,5 +1,5 @@
 import React from 'react';
-import getCardData from './InfoCardTools';
+import { getCardData } from './InfoCardTools';
 
 export default function InfoCard({ data, index }) {
     const newData = getCardData(index);

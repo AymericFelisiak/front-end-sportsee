@@ -4,7 +4,7 @@ import { ReactComponent as MeatIcon } from '../../images/meat.svg';
 import { ReactComponent as AppleIcon } from '../../images/apple.svg';
 import { ReactComponent as CheeseBurgerIcon } from '../../images/cheeseburger.svg';
 
-export default function getCardData(index) {
+export function getCardData(index) {
     const newData = { icon: '', color: '', keyData: '' };
     if (index === 0) {
         newData.icon = <FlameIcon />;
