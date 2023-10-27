@@ -11,6 +11,7 @@ import {
 } from 'recharts';
 import { useUserContext } from '../../contexts/UserContext';
 import { formattedDailySessionsDate } from './DailySessionsTools';
+import CustomDailySessionsTooltip from './CustomDailySessionsTooltip';
 
 export default function DailySessionsBarChart() {
     const { ACTIVITY_DATA } = useUserContext();
@@ -37,7 +38,7 @@ export default function DailySessionsBarChart() {
                     orientation="right"
                     tick={{ fill: '#9B9EAC', dx: 30, fontWeight: 500, fontSize: 15 }}
                 />
-                <Tooltip />
+                <Tooltip content={ <CustomDailySessionsTooltip />}/>
                 <Legend
                     iconType="circle"
                     iconSize={8}
