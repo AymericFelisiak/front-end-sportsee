@@ -2,7 +2,6 @@
     grid-area: line-chart;
     position: relative;
     background-color: #ff0000;
-    padding: 40px 60px;
     box-shadow: 0px 2px 4px 0px #00000005;
     color: #ffffff28;
     border-radius: 10px;
@@ -16,5 +15,15 @@
             font-size: 12px;
             font-weight: 500;
         }
+    }
+
+    .averagesessions-cursor {
+        width: 100px;
+        height: 100px;
+        background-color: #00000050;
+    }
+
+    .rectangle {
+        opacity: 0.1;
     }
 }
