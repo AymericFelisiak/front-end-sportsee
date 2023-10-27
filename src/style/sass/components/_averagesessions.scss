@@ -6,4 +6,15 @@
     box-shadow: 0px 2px 4px 0px #00000005;
     color: #ffffff28;
     border-radius: 10px;
+
+    .averagesessions-tooltip {
+        background-color: white;
+        padding: 1px 8px;
+
+        p {
+            color: black;
+            font-size: 12px;
+            font-weight: 500;
+        }
+    }
 }

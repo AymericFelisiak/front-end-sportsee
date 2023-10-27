@@ -5,6 +5,7 @@ import {
     formattedAverageSessions,
     getMinSessionLength
 } from './AverageSessionsTools';
+import CustomAverageSessionsTooltip from './CustomAverageSessionsTooltip';
 
 export default function AverageSessionsLineChart() {
     const { AVERAGE_SESSIONS } = useUserContext();
@@ -48,7 +49,7 @@ export default function AverageSessionsLineChart() {
                 }}
             />
             <YAxis domain={[getMinSessionLength(userData) - 10]} hide={true} />
-            <Tooltip cursor={{ stroke: 'black', strokeWidth: 2 }} />
+            <Tooltip content={ <CustomAverageSessionsTooltip />} />
             <Line
                 stroke="url(#lineGradient)"
                 strokeWidth={3}
