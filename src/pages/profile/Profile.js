@@ -6,6 +6,7 @@ import UserName from '../../components/username/UserName';
 import DailySessions from '../../components/dailysessions/DailySessions';
 import InfoCards from '../../components/infocards/InfoCards';
 import Performance from '../../components/performance/Performance';
+import Score from '../../components/score/Score';
 
 export default function Profile() {
     const { id } = useParams();
@@ -13,11 +14,12 @@ export default function Profile() {
     return (
         <UserContextProvider id={id}>
             <main className="main-container">
-                <UserName></UserName>
-                <DailySessions></DailySessions>
-                <InfoCards></InfoCards>
-                <AverageSessions></AverageSessions>
-                <Performance></Performance>
+                <UserName />
+                <DailySessions />
+                <InfoCards />
+                <AverageSessions />
+                <Performance />
+                <Score />
             </main>
         </UserContextProvider>
     );
