@@ -3,7 +3,6 @@
     display: flex;
     position: relative;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
     background-color: black;
     width: 120px;
@@ -32,8 +31,12 @@
     }
     
     .copyright {
-        margin-bottom: 30px;
+        display: flex;
+        position: absolute;
+        height: 100%;
+        
         h3 {
+            margin-bottom: 30px;
             rotate: 180deg;
             color: white;
             writing-mode: vertical-lr;
