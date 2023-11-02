@@ -1,11 +1,13 @@
 .sidebar {
     grid-area: sidebar;
     display: flex;
-    position: relative;
+    position: absolute;
     flex-direction: column;
     align-items: center;
     background-color: black;
-    width: 120px;
+    width: fit-content;
+    height: 100%;
+    padding: 0px 20px;
 
     .icon-container {
         display: flex;

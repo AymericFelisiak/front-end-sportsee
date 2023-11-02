@@ -26,13 +26,3 @@ html {
 body {
 	margin: 0;
 }
-
-.App {
-	display: grid;
-    height: 100%;
-    grid-template-columns: auto 1fr;
-    grid-template-rows: auto 1fr;
-	grid-template-areas:
-		"navbar navbar"
-		"sidebar main";
-}

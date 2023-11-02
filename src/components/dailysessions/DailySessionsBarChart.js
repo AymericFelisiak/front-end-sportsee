@@ -22,7 +22,7 @@ export default function DailySessionsBarChart() {
     }, []);
 
     return (
-        <ResponsiveContainer>
+        <ResponsiveContainer width="99%">
             <BarChart data={dailyData}>
                 <CartesianGrid
                     stroke="#DEDEDE"

@@ -17,7 +17,7 @@ export default function ScoreRadialBarChart() {
     }, []);
 
     return (
-        <ResponsiveContainer width="100%" height="100%">
+        <ResponsiveContainer width="99%">
             <RadialBarChart
                 data={score}
                 startAngle={220}
@@ -25,7 +25,12 @@ export default function ScoreRadialBarChart() {
                 innerRadius={90}
                 barSize={15}
             >
-                <RadialBar minAngle={15} dataKey="score" cornerRadius={90} fill='#FF0000' />
+                <RadialBar
+                    minAngle={15}
+                    dataKey="score"
+                    cornerRadius={90}
+                    fill="#FF0000"
+                />
                 <PolarAngleAxis
                     type="number"
                     domain={[0, 1]}

@@ -1,5 +1,7 @@
 .main-container {
     display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto 160px 160px 130px 130px;
     grid-template-areas: 
         'username username username username'
         'bar-chart bar-chart bar-chart info-card'
@@ -7,6 +9,6 @@
         'line-chart radar-chart radial-bar-chart info-card'
         'line-chart radar-chart radial-bar-chart info-card'
     ;
-    gap: 30px 50px;
-    margin: 40px 80px 60px 100px;
+    gap: 30px 30px;
+    margin: 40px 80px 60px 190px;
 }

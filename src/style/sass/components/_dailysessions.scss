@@ -3,7 +3,6 @@
     display: flex;
     position: relative;
     background-color: #FBFBFB;
-    padding: 40px 60px;
     border-radius: 10px;
 
     h3 {
@@ -11,11 +10,6 @@
         top: 26px;
         font-weight: 500;
         color: #20253A;
-    }
-
-
-    .recharts-responsive-container {
-        width: 99% !important;
     }
 
     .recharts-legend-wrapper {

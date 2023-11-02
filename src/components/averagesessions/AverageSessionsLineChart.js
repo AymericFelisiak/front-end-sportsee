@@ -25,7 +25,7 @@ export default function AverageSessionsLineChart() {
     }, []);
 
     return (
-        <ResponsiveContainer>
+        <ResponsiveContainer width="99%">
             <LineChart
                 margin={{ top: 100, right: 20, bottom: 25, left: 20 }}
                 data={userData}
