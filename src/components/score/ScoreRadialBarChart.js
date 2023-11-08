@@ -17,7 +17,7 @@ export default function ScoreRadialBarChart() {
     }, []);
 
     return (
-        <ResponsiveContainer width="99%">
+        <ResponsiveContainer>
             <RadialBarChart
                 data={score}
                 startAngle={220}

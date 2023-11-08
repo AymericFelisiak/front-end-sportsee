@@ -22,7 +22,7 @@ export default function PerformanceRadarChart() {
     }, []);
 
     return (
-        <ResponsiveContainer width="99%">
+        <ResponsiveContainer>
             <RadarChart data={performanceData} fill="#282D30">
                 <PolarGrid stroke="#FFFFFF" radialLines={false}/>
                 <PolarRadiusAxis axisLine={false} tick={false} domain={[0, maxValue]}/>

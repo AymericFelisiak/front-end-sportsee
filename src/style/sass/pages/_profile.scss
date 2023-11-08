@@ -1,7 +1,7 @@
 .main-container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: auto 160px 160px 130px 130px;
+    grid-template-columns: 25% 25% 25% 1fr;
+    grid-template-rows: auto 160px 160px 130px 1fr;
     grid-template-areas: 
         'username username username username'
         'bar-chart bar-chart bar-chart info-card'
