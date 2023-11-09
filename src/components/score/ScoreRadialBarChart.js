@@ -22,13 +22,13 @@ export default function ScoreRadialBarChart() {
                 data={score}
                 startAngle={220}
                 endAngle={-140}
-                innerRadius={90}
-                barSize={15}
+                innerRadius='65%'
+                barSize={10}
             >
                 <RadialBar
                     minAngle={15}
                     dataKey="score"
-                    cornerRadius={90}
+                    cornerRadius={80}
                     fill="#FF0000"
                 />
                 <PolarAngleAxis
