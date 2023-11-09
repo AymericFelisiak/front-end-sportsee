@@ -2,11 +2,11 @@ import React, { useEffect, useState } from 'react';
 import { useUserContext } from '../../contexts/UserContext';
 
 export default function UserName() {
-    const { MAIN_DATA } = useUserContext();
+    const { userInfos } = useUserContext();
     const [userName, setUserName] = useState('');
 
     useEffect(() => {
-        const userName = MAIN_DATA.userInfos.firstName;
+        const userName = userInfos.firstName;
         setUserName(userName);
     });
 

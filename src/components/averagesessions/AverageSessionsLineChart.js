@@ -16,18 +16,18 @@ import CustomAverageSessionsTooltip from './CustomAverageSessionsTooltip';
 import CustomAverageSessionsCursor from './CustomAverageSessionsCursor';
 
 export default function AverageSessionsLineChart() {
-    const { AVERAGE_SESSIONS } = useUserContext();
+    const { averageSessions } = useUserContext();
     const [userData, setUserData] = useState([]);
 
     useEffect(() => {
-        const newData = formattedAverageSessions(AVERAGE_SESSIONS.sessions);
+        const newData = formattedAverageSessions(averageSessions);
         setUserData(newData);
     }, []);
 
     return (
         <ResponsiveContainer>
             <LineChart
-                margin={{ top: 100, right: 20, bottom: 25, left: 20 }}
+                margin={{ top: 100, right: 0, bottom: 25, left: 0 }}
                 data={userData}
             >
                 <defs>
@@ -66,6 +66,7 @@ export default function AverageSessionsLineChart() {
                         fontSize: 12,
                         opacity: 0.7
                     }}
+                    padding={{ left: 20, right: 20 }}
                 />
                 <YAxis
                     domain={[getMinSessionLength(userData) - 10]}

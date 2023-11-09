@@ -1,5 +1,6 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
 import FetchUser from '../services/FetchUser';
+import User from '../services/User';
 
 const UserContext = createContext();
 
@@ -11,7 +12,8 @@ export function UserContextProvider({ id, children }) {
         async function fetchData() {
             try {
                 const response = await FetchUser(id);
-                setUserData(response);
+                const user = new User(response.MAIN_DATA, response.ACTIVITY_DATA, response.AVERAGE_SESSIONS, response.PERFORMANCE);
+                setUserData(user);
                 setIsLoading(false);
             } catch (error) {
                 console.error('Error user fetch', error);

@@ -3,17 +3,17 @@ import InfoCard from './InfoCard';
 import { useUserContext } from '../../contexts/UserContext';
 
 export default function InfoCards() {
-    const { MAIN_DATA } = useUserContext();
-    const [data, setData] = useState([]);
+    const { keyData } = useUserContext();
+    const [newKeyData, setNewKeyData] = useState([]);
 
     useEffect(() => {
-        setData(MAIN_DATA.keyData);
+        setNewKeyData(keyData);
     });
 
     return (
         <div className="infocards-container">
-            {Object.keys(data).map((key, i) => {
-                return <InfoCard key={i} data={data[key]} index={i} />;
+            {Object.keys(newKeyData).map((key, i) => {
+                return <InfoCard key={i} data={newKeyData[key]} index={i} />;
             })}
         </div>
     );

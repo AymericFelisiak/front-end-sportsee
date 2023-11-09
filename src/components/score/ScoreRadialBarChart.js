@@ -6,20 +6,21 @@ import {
     PolarAngleAxis
 } from 'recharts';
 import { useUserContext } from '../../contexts/UserContext';
-import { formatUserScore } from './ScoreTools';
+import formatUserScore from '../score/ScoreTools';
 
 export default function ScoreRadialBarChart() {
-    const { MAIN_DATA } = useUserContext();
-    const [score, setScore] = useState([]);
+    const { score } = useUserContext();
+    const [newScore, setNewScore] = useState([]);
 
     useEffect(() => {
-        setScore(formatUserScore(MAIN_DATA));
+        setNewScore(formatUserScore(score));
+        console.log(newScore);
     }, []);
 
     return (
         <ResponsiveContainer>
             <RadialBarChart
-                data={score}
+                data={newScore}
                 startAngle={220}
                 endAngle={-140}
                 innerRadius='65%'

@@ -14,11 +14,11 @@ import { formattedDailySessionsDate } from './DailySessionsTools';
 import CustomDailySessionsTooltip from './CustomDailySessionsTooltip';
 
 export default function DailySessionsBarChart() {
-    const { ACTIVITY_DATA } = useUserContext();
+    const { activity } = useUserContext();
     const [dailyData, setDailyData] = useState([]);
 
     useEffect(() => {
-        setDailyData(formattedDailySessionsDate(ACTIVITY_DATA.sessions));
+        setDailyData(formattedDailySessionsDate(activity));
     }, []);
 
     return (

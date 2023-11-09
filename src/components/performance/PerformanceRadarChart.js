@@ -11,12 +11,12 @@ import { useUserContext } from '../../contexts/UserContext';
 import { formattedPerformanceData, getMaxPerformanceValue } from './PerformanceTools';
 
 export default function PerformanceRadarChart() {
-    const { PERFORMANCE } = useUserContext();
+    const { performance } = useUserContext();
     const [performanceData, setPerformanceData] = useState([]);
     const [maxValue, setMaxValue] = useState('');
 
     useEffect(() => {
-        const newData = formattedPerformanceData(PERFORMANCE);
+        const newData = formattedPerformanceData(performance);
         setPerformanceData(newData);
         setMaxValue(getMaxPerformanceValue(newData) + 20);
     }, []);
