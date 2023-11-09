@@ -2,9 +2,17 @@
     grid-area: line-chart;
     position: relative;
     background-color: #ff0000;
-    color: #ffffff28;
     border-radius: 10px;
     aspect-ratio: 1/1;
+
+    h3 {
+        position: absolute;
+        color: #ffffff60;
+        font-size: 15px;
+        font-weight: 500;
+        top: 10px;
+        left: 30px;
+    }
 
     .averagesessions-tooltip {
         background-color: white;
