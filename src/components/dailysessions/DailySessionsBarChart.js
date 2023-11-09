@@ -23,7 +23,10 @@ export default function DailySessionsBarChart() {
 
     return (
         <ResponsiveContainer width="99%">
-            <BarChart data={dailyData}>
+            <BarChart
+                data={dailyData}
+                margin={{ top: 20, right: 20, bottom: 20, left: 30 }}
+            >
                 <CartesianGrid
                     stroke="#DEDEDE"
                     strokeDasharray="2 2"
@@ -31,14 +34,38 @@ export default function DailySessionsBarChart() {
                 />
                 <XAxis
                     dataKey="date"
-                    tick={{ fill: '#9B9EAC', dy: 15, fontWeight: 500, fontSize: 15 }}
+                    tick={{
+                        fill: '#9B9EAC',
+                        dy: 15,
+                        fontWeight: 500,
+                        fontSize: 15
+                    }}
+                    axisLine={false}
+                    tickLine={false}
+                />
+                <YAxis
+                    dataKey="kilogram"
+                    yAxisId="right"
+                    orientation="right"
+                    tick={{
+                        fill: '#9B9EAC',
+                        dx: 30,
+                        fontWeight: 500,
+                        fontSize: 15
+                    }}
+                    axisLine={false}
+                    tickLine={false}
                 />
                 <YAxis
                     dataKey="calories"
-                    orientation="right"
-                    tick={{ fill: '#9B9EAC', dx: 30, fontWeight: 500, fontSize: 15 }}
+                    yAxisId="left"
+                    orientation="left"
+                    hide={true}
                 />
-                <Tooltip content={ <CustomDailySessionsTooltip />}/>
+                <Tooltip
+                    content={<CustomDailySessionsTooltip />}
+                    cursor={{ fill: '#C4C4C450' }}
+                />
                 <Legend
                     iconType="circle"
                     iconSize={8}
@@ -48,6 +75,7 @@ export default function DailySessionsBarChart() {
                 />
                 <Bar
                     dataKey="kilogram"
+                    yAxisId="right"
                     fill="#282D30"
                     name="Poids (kg)"
                     barSize={7}
@@ -55,6 +83,7 @@ export default function DailySessionsBarChart() {
                 />
                 <Bar
                     dataKey="calories"
+                    yAxisId="left"
                     fill="#E60000"
                     name="Calories brûlées (kCal)"
                     barSize={7}
