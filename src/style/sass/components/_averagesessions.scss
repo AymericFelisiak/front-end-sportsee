@@ -4,6 +4,7 @@
     background-color: #ff0000;
     border-radius: 10px;
     aspect-ratio: 1/1;
+    overflow: visible;
 
     h3 {
         position: absolute;
@@ -23,6 +24,10 @@
             font-size: 12px;
             font-weight: 500;
         }
+    }
+
+    .recharts-cartesian-axis-ticks {
+        transform: scale(0.8) translateX(13%);
     }
 
     .rectangle {

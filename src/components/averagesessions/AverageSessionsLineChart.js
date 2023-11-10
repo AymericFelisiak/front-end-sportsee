@@ -27,7 +27,7 @@ export default function AverageSessionsLineChart() {
     return (
         <ResponsiveContainer>
             <LineChart
-                margin={{ top: 100, right: 0, bottom: 25, left: 0 }}
+                margin={{ top: 70, right: 0, bottom: 25, left: 0 }}
                 data={userData}
             >
                 <defs>
@@ -61,12 +61,12 @@ export default function AverageSessionsLineChart() {
                     dataKey="day"
                     tick={{
                         fill: '#FFFFFF',
-                        dy: 15,
+                        dy: 70,
                         fontWeight: 500,
-                        fontSize: 12,
+                        fontSize: 18,
                         opacity: 0.7
                     }}
-                    padding={{ left: 20, right: 20 }}
+                    interval={0}
                 />
                 <YAxis
                     domain={[getMinSessionLength(userData) - 10]}
