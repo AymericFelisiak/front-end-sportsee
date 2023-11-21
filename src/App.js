@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import NavBar from './components/navbar/NavBar';
 import SideBar from './components/sidebar/SideBar';
 import Profile from './pages/profile/Profile';
+import Error from './pages/error/Error';
 
 function App() {
     return (
@@ -13,6 +14,7 @@ function App() {
             <BrowserRouter>
                 <Routes>
                     <Route path="/user/:id" element={<Profile />} />
+                    <Route path="*" element={<Error />} />
                 </Routes>
             </BrowserRouter>
         </div>

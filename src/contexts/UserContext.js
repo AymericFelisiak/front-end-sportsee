@@ -1,6 +1,7 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
 import FetchUser from '../services/FetchUser';
 import User from '../services/User';
+import { useNavigate } from 'react-router-dom';
 
 /**
  * Creates a context containing the user class.
@@ -12,14 +13,23 @@ const UserContext = createContext();
 export function UserContextProvider({ id, children }) {
     const [userData, setUserData] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
+    const navigate = useNavigate();
 
     useEffect(() => {
         async function fetchData() {
             try {
                 const response = await FetchUser(id);
-                const user = new User(response.MAIN_DATA, response.ACTIVITY_DATA, response.AVERAGE_SESSIONS, response.PERFORMANCE);
-                setUserData(user);
-                setIsLoading(false);
+                if (response.MAIN_DATA === undefined) navigate('/error');
+                else {
+                    const user = new User(
+                        response.MAIN_DATA,
+                        response.ACTIVITY_DATA,
+                        response.AVERAGE_SESSIONS,
+                        response.PERFORMANCE
+                    );
+                    setUserData(user);
+                    setIsLoading(false);
+                }
             } catch (error) {
                 console.error('Error user fetch', error);
             }
