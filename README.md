@@ -18,7 +18,7 @@ If you are working with several versions of NodeJS, we recommend you install [nv
 ## 3. User Profiles
 
 WARNING : Urls are different if you are using the mocked data or the API.
-To change the endpoint, change value of the paramaters in the config.js file.
+To change the endpoint, change value of the parameters in the config.js file.
 
 When using mocked data :
 - `http://localhost:3000/user/12`
