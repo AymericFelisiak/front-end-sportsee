@@ -1,3 +1,5 @@
+// User class contained in the React Context
+
 class User {
     constructor(mainData, activityData, averageSessionsData, performanceData) {
         this.id = mainData.id;

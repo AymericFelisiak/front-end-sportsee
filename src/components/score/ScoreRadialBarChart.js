@@ -8,6 +8,8 @@ import {
 import { useUserContext } from '../../contexts/UserContext';
 import formatUserScore from '../score/ScoreTools';
 
+// Component for the radial bar chart showing the user score
+
 export default function ScoreRadialBarChart() {
     const { score } = useUserContext();
     const [newScore, setNewScore] = useState([]);

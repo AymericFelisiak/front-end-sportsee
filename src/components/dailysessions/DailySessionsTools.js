@@ -1,3 +1,5 @@
+// Formats the data for the bar chart
+
 export function formattedDailySessionsDate(sessions) {
     const formattedSessions = [];
 

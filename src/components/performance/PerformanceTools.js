@@ -1,3 +1,5 @@
+// Formats the data to be used for the redar chart
+
 export function formattedPerformanceData(userPerformance) {
     const newPerformanceData = [];
 
@@ -15,6 +17,8 @@ export function formattedPerformanceData(userPerformance) {
     return newPerformanceData.reverse();
 }
 
+// Translates kind values from English to French
+
 function getKindInFrench(value) {
     if (value === 'cardio') return 'Cardio';
     if (value === 'energy') return 'Energie';
@@ -23,6 +27,8 @@ function getKindInFrench(value) {
     if (value === 'speed') return 'Vitesse';
     if (value === 'intensity') return 'Intensité';
 }
+
+// Return the max perfromance value. Used for the domain of the graph
 
 export function getMaxPerformanceValue(userPerformance) {
     let max = 0;

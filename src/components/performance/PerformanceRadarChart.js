@@ -10,6 +10,8 @@ import {
 import { useUserContext } from '../../contexts/UserContext';
 import { formattedPerformanceData, getMaxPerformanceValue } from './PerformanceTools';
 
+// Radar chart component
+
 export default function PerformanceRadarChart() {
     const { performance } = useUserContext();
     const [performanceData, setPerformanceData] = useState([]);

@@ -1,3 +1,5 @@
+// Formats and returns session data associated with the day
+
 export function formattedAverageSessions(sessions) {
     const newSessions = [];
     const daysArray = ['L', 'M', 'M', 'J', 'V', 'S', 'D'];
@@ -9,6 +11,8 @@ export function formattedAverageSessions(sessions) {
     }
     return newSessions;
 }
+
+// Return the shortest session contained in the data. Used to change the domain of the graph
 
 export function getMinSessionLength(sessions) {
     let min = 10000;

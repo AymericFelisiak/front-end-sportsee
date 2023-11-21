@@ -1,6 +1,8 @@
 import { useMockedData } from '../config';
 import ActivityData from '../mock/ActivityData.json';
 
+// Retrieves either API or Mocked user activity data by its id.
+
 export default async function UserActivityDataService(id) {
     if (useMockedData) {
         const userData = ActivityData.find(

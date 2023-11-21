@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import ScoreRadialBarChart from './ScoreRadialBarChart';
 import { useUserContext } from '../../contexts/UserContext';
 
+// Main component for the user score. Container radial bar chart component
+
 export default function Score() {
     const { score } = useUserContext();
     const [newScore, setNewScore] = useState([]);

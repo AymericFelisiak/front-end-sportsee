@@ -1,6 +1,11 @@
 import React from 'react';
 import { getCardData } from './InfoCardTools';
 
+/* Component for the info card.
+Data : contains the value and the icon
+Index : if 0 then kCal else g
+*/
+
 export default function InfoCard({ data, index }) {
     const newData = getCardData(index);
 

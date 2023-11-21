@@ -1,6 +1,8 @@
 import React from 'react';
 import Logo from '../../images/logo.png';
 
+// Top navbar component
+
 export default function NavBar() {
     return (
         <header className='navbar'>

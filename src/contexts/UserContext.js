@@ -2,6 +2,11 @@ import React, { createContext, useContext, useEffect, useState } from 'react';
 import FetchUser from '../services/FetchUser';
 import User from '../services/User';
 
+/**
+ * Creates a context containing the user class.
+ * Easier to use context to avoid props drilling.
+ */
+
 const UserContext = createContext();
 
 export function UserContextProvider({ id, children }) {

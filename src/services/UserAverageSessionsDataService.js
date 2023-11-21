@@ -1,6 +1,8 @@
 import { useMockedData } from '../config';
 import AverageSessionData from '../mock/AverageSessionsData.json';
 
+// Retrieves either API or Mocked user average session data by its id.
+
 export default async function UserAverageSessionsDataService(id) {
     if (useMockedData) {
         const userData = AverageSessionData.find(

@@ -3,32 +3,32 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    max-width: 230px;
+    width: 100%;
     row-gap: 40px;
 
     .infocard-wrapper {
         display: flex;
         align-items: center;
-        column-gap: 10%;
-        padding: 0 10%;
+        column-gap: 12%;
         background-color: #FBFBFB;
         border-radius: 10px;
         width: 100%;
         height: 100%;
-        justify-content: center;
+        max-height: 125px;
+        padding-left: 30px;
 
         .image-wrapper {
             display: flex;
             justify-content: center;
             align-items: center;
-            min-width: 30px;
-            width: 50%;
-            max-width: 60px;
+            width: 60px;
+            height: 60px;
             border-radius: 10px;
             aspect-ratio: 1 / 1;
 
             svg {
-                width: 100%;
-                height: 50%;
+                height: 30%;
                 color: #FF0000;
                 fill: #FF0000;
             }
@@ -64,5 +64,25 @@
                 color: #74798C90;
             }
         }
+    }
+}
+
+@media screen and (max-width: 1140px) {
+    .infocards-container {
+        .infocard-wrapper {
+
+            padding-left: 20px;
+
+            .data-wrapper {
+                h3 {
+                    font-size: 18px;
+                }
+    
+                span {
+                    font-size: 12px;
+                }
+            }
+        }
+
     }
 }

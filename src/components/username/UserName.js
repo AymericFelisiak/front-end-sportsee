@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useUserContext } from '../../contexts/UserContext';
 
+// Component for the user name shown on top of the profile page
+
 export default function UserName() {
     const { userInfos } = useUserContext();
     const [userName, setUserName] = useState('');

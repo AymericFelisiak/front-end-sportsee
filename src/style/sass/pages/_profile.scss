@@ -1,14 +1,20 @@
 .main-container {
     display: grid;
-    grid-template-columns: 25% 25% 25% 1fr;
+    grid-template-columns: 22% 22% 22% 22%;
     grid-template-rows: auto 160px 160px 130px 1fr;
-    grid-template-areas: 
+    grid-template-areas:
         'username username username username'
         'bar-chart bar-chart bar-chart info-card'
         'bar-chart bar-chart bar-chart info-card'
         'line-chart radar-chart radial-bar-chart info-card'
-        'line-chart radar-chart radial-bar-chart info-card'
-    ;
+        'line-chart radar-chart radial-bar-chart info-card';
     gap: 30px 30px;
-    margin: 40px 80px 60px 190px;
+    margin: 40px 0 60px 190px;
+}
+
+@media screen and (max-width: 1220px) {
+    .main-container {
+        margin: 40px 0 60px 150px;
+        gap: 20px 20px;
+    }
 }

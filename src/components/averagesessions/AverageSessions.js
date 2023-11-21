@@ -1,6 +1,8 @@
 import React from 'react';
 import AverageSessionsLineChart from './AverageSessionsLineChart';
 
+// Main component containing the line chart
+
 export default function AverageSessions() {
     return (
         <div className="averagesessions-container">

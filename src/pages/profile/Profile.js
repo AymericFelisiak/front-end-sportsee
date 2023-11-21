@@ -8,6 +8,8 @@ import InfoCards from '../../components/infocards/InfoCards';
 import Performance from '../../components/performance/Performance';
 import Score from '../../components/score/Score';
 
+// Profile page layout calling each component (user name, graphs...)
+
 export default function Profile() {
     const { id } = useParams();
 

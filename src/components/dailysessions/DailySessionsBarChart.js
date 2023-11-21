@@ -13,6 +13,8 @@ import { useUserContext } from '../../contexts/UserContext';
 import { formattedDailySessionsDate } from './DailySessionsTools';
 import CustomDailySessionsTooltip from './CustomDailySessionsTooltip';
 
+// Bar chart component
+
 export default function DailySessionsBarChart() {
     const { activity } = useUserContext();
     const [dailyData, setDailyData] = useState([]);

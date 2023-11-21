@@ -15,6 +15,8 @@ import {
 import CustomAverageSessionsTooltip from './CustomAverageSessionsTooltip';
 import CustomAverageSessionsCursor from './CustomAverageSessionsCursor';
 
+// Line chart component
+
 export default function AverageSessionsLineChart() {
     const { averageSessions } = useUserContext();
     const [userData, setUserData] = useState([]);
@@ -61,7 +63,6 @@ export default function AverageSessionsLineChart() {
                     dataKey="day"
                     tick={{
                         fill: '#FFFFFF',
-                        dy: 70,
                         fontWeight: 500,
                         fontSize: 18,
                         opacity: 0.7
