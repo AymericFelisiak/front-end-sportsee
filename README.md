@@ -1,14 +1,14 @@
 # Front-end SportSee
 
 This repo contains all the source code of the front end of SportSee site.
-## 1 Prerequisites
+## 1. Prerequisites
 
 - [NodeJS (**version 20.7**)](https://nodejs.org/en/)
 - [Sportsee Back-end](https://github.com/OpenClassrooms-Student-Center/P9-front-end-dashboard)
 
 If you are working with several versions of NodeJS, we recommend you install [nvm](https://github.com/nvm-sh/nvm). This tool will allow you to easily manage your NodeJS versions.
 
-## 2 Launching the project
+## 2. Launching the project
 
 - Fork the repository.
 - Clone it on your computer.
