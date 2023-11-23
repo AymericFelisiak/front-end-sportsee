@@ -1,6 +1,6 @@
 .main-container {
     display: grid;
-    grid-template-columns: 22% 22% 22% 22%;
+    grid-template-columns: 22% 22% 22% 1fr;
     grid-template-rows: auto 160px 160px 130px 1fr;
     grid-template-areas:
         'username username username username'
